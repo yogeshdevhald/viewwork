@@ -1,0 +1,77 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<!-- <div id="app">
+  {{ message }}
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+<div id="testif">
+  <span v-if="testseen">Now you see me</span>
+</div>
+
+<div id="forloop">
+	<li v-for="loop in todos">
+		{{loop.text}}
+	</li>
+	</div>
+ -->
+	<div id="onclickfunction">
+		<p>{{ message }}</p>
+		<button v-on:click="reversestring">click here</button>
+	</div>
+
+</body>
+</html>
+<script>
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     message: 'Hello Vue!'
+//   }
+// })
+
+// var app2 = new Vue({
+//   el: '#app-2',
+//   data: {
+//     message: 'You loaded this page on ' + new Date().toLocaleString()
+//   }
+// })
+// var test = new Vue({
+//   el: '#testif',
+//   data: {
+//     testseen: true
+//   }
+// })
+
+// var forloop = new Vue({
+// 	el:"#forloop",
+// 	data:{
+// 		 todos: [
+//       		{ text: 'Learn JavaScript' },
+//       		{ text: 'Learn Vue' },
+//       		{ text: 'Build something awesome' }
+//     	]
+// 	}
+// })
+
+var clickfunction = new Vue({
+	el:"#onclickfunction",
+	data:{
+		message:"i am message",
+	},
+	methods:{
+		reversestring:function(){
+			this.message = this.message.split('').reverse().join('')
+			//alert(this.message);
+		}
+	}
+})
+</script>
